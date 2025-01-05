@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "0e25d446-13bc-4871-8501-9c2acdb6e3a3",
+		"name": "To do list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36909775"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"AishV\",\r\n    \"password\" : \"abcdefgh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBaXNoViIsImV4cCI6MTcyMjM1Njc2M30.NLX7cSMQdpqFgVA8Wrb9KiZnIZ8di_Wn8mZYKrN2_1c"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"AishV\",\r\n    \"password\" : \"abcdefgh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "get all task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update description",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBaXNoViIsImV4cCI6MTczNjA4MDUxOX0.8zGZjIEjm7wRk02rgxYSTKakynMMXPHlFS0OPvmxzFU"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"status\": \"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/677a6eb19be04085ea19edc3/status?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBaXNoViIsImV4cCI6MTczNjA4MDUxOX0.8zGZjIEjm7wRk02rgxYSTKakynMMXPHlFS0OPvmxzFU",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"677a6eb19be04085ea19edc3",
+						"status"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBaXNoViIsImV4cCI6MTczNjA4MDUxOX0.8zGZjIEjm7wRk02rgxYSTKakynMMXPHlFS0OPvmxzFU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update title",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"abc\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/677a6eb19be04085ea19edc3/title?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBaXNoViIsImV4cCI6MTczNjA4MDUxOX0.8zGZjIEjm7wRk02rgxYSTKakynMMXPHlFS0OPvmxzFU",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"677a6eb19be04085ea19edc3",
+						"title"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBaXNoViIsImV4cCI6MTczNjA4MDUxOX0.8zGZjIEjm7wRk02rgxYSTKakynMMXPHlFS0OPvmxzFU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update description",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\":\"xyz\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/677a6eb19be04085ea19edc3/description?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBaXNoViIsImV4cCI6MTczNjA4MDUxOX0.8zGZjIEjm7wRk02rgxYSTKakynMMXPHlFS0OPvmxzFU",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"677a6eb19be04085ea19edc3",
+						"description"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBaXNoViIsImV4cCI6MTczNjA4MDUxOX0.8zGZjIEjm7wRk02rgxYSTKakynMMXPHlFS0OPvmxzFU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
